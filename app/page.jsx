@@ -1,10 +1,7 @@
-
-import Blogs from "./pages/index";
-
 export default function Home() {
   return (
     <section>
-      <Blogs/>
+      <h1> HomePage </h1>
     </section>
   );
 }

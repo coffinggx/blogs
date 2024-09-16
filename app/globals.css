@@ -5,7 +5,7 @@
 @layer base {
   /* Headings */
   h1 {
-    @apply text-5xl font-extrabold mb-6 text-gray-200;
+    @apply text-3xl font-extrabold mb-6 text-gray-200;
     @apply sm:text-4xl sm:mb-5;
   }
   h2 {
@@ -33,29 +33,6 @@
   p {
     @apply mb-5 leading-relaxed text-gray-200;
     @apply sm:mb-4;
-  }
-
-  /* Lists */
-  ul,
-  ol {
-    @apply mb-5 ml-10 text-gray-200;
-    @apply sm:ml-6 sm:mb-4;
-  }
-  ul {
-    @apply list-disc;
-  }
-  ol {
-    @apply list-decimal;
-  }
-  li {
-    @apply mb-2;
-    @apply sm:mb-1.5;
-  }
-
-  /* Links */
-  a {
-    @apply text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-out;
-    @apply sm:text-blue-400;
   }
 
   /* Blockquotes */
