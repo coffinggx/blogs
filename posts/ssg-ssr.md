@@ -1,6 +1,6 @@
 ---
 title :# Concrete Technology
-date: '2020-12-12'
+date: '2020-02-02'
 ---
 
 ## Admixtures and its types
@@ -11,4 +11,3 @@ Types of Admixtures
 
 - Accelerator
 - Retarder
-
