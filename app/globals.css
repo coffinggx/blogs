@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  /* Headings */
   h1 {
     @apply text-3xl font-extrabold mb-6 text-gray-200;
     @apply sm:text-4xl sm:mb-5;
@@ -29,19 +28,17 @@
     @apply sm:text-base sm:mb-1;
   }
 
-  /* Paragraphs */
+
   p {
     @apply mb-5 leading-relaxed text-gray-200;
     @apply sm:mb-4;
   }
 
-  /* Blockquotes */
   blockquote {
     @apply pl-6 border-l-4 border-blue-400 italic my-6 text-gray-200 bg-gray-50 rounded-md shadow-sm;
     @apply sm:pl-4 sm:my-4;
   }
 
-  /* Code blocks */
   pre {
     @apply text-gray-200 bg-gray-800 p-5 rounded-lg overflow-x-auto   my-6 shadow-lg;
     @apply sm:px-0.5 sm:py-0.5 sm:m-2;
@@ -50,7 +47,6 @@
     @apply text-gray-200 px-2 py-1 rounded bg-gray-800;
   }
 
-  /* Tables */
   table {
     @apply w-full border-collapse mb-5 text-left;
     @apply sm:text-sm;
@@ -66,7 +62,6 @@
     @apply bg-gray-50;
   }
 
-  /* Add subtle hover effects for interactivity */
   tr:hover {
     @apply bg-gray-100 transition-colors duration-300 ease-in-out;
   }
