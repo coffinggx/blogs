@@ -9,7 +9,7 @@ Next.js has two forms of pre-rendering: **Statiic APi Generation** and **Server-
 - **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
   Here's some JavaScript code:
 
-```javascript here is example of code required for api
+```javascript
 import mongoose from "mongoose";
 app.listen(port, () => {
   console.log("Hello World");
