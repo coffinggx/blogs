@@ -13,5 +13,5 @@ Next.js has two forms of pre-rendering: **Statiic APi Generation** and **Server-
 import mongoose from "mongoose";
 app.listen(port, () => {
   console.log("Hello World");
-});
+})`
 ```
