@@ -1,13 +1,13 @@
 "use client";
 
-import profile from "./public/profile2.jpg";
+import profile from "./public/profile3.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
   visible: {
-    opacity: 1,
+    opacity: 1, 
     scale: 1,
     transition: {
       delayChildren: 0.3,
@@ -27,36 +27,72 @@ const item = {
 export default function Home() {
   return (
     <motion.div
-      className="w-full h-screen flex-col items-center justify-center overflow-hidden" // Added overflow-hidden
+      className="min-h-screen flex flex-col items-center justify-center bg-gray-900 overflow-hidden px-5 md:px-20"
       variants={container}
       initial="hidden"
       animate="visible"
     >
-      <div className="flex md:flex-row flex-col items-center gap-10 ">
-        <motion.div variants={item} className="md:w-1/3 shadow rounded-lg px-8 py-10">
-          {/* Content */}
-          <h2 className="text-3xl font-bold text-gray-800">Sudip Paudel</h2>
-          <p className="text-lg text-gray-600">Based in Baglung, Nepal</p>
-          <p className="text-lg text-gray-600">Available for fullstack development</p>
+      {/* Grid Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-5 w-full max-w-6xl h-full items-center">
+        
+        {/* Left side: Text content */}
+        <motion.div
+          variants={item}
+          className="space-y-8 col-span-1"
+        >
+          {/* Card 1 */}
+          <div className="p-8 rounded-lg bg-gray-800 text-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            <h2 className="text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-4">
+              Sudip Paudel
+            </h2>
+            <p className="text-lg font-medium text-gray-400">
+              Based in Baglung, Nepal
+            </p>
+            <p className="text-lg font-medium text-gray-400">
+              Available for Fullstack Development
+            </p>
+          </div>
         </motion.div>
-        <motion.div variants={item} className="md:w-1/3">
-          <Image src={profile} alt="Sudip Paudel" width={200} height={200} className="rounded-full" />
+
+        {/* Center: Image */}
+        <motion.div
+          variants={item}
+          className="flex justify-center col-span-1"
+        >
+          <Image
+            src={profile}
+            alt="Sudip Paudel"
+            width={400}
+            height={600}
+            className="rounded-lg shadow-lg object-cover transition-transform duration-300 transform hover:scale-105"
+          />
         </motion.div>
-        <motion.div variants={item} className="md:w-1/3  shadow rounded-lg px-8 py-10">
-          {/* Content */}
-          <h2 className="text-3xl font-bold text-gray-800">FullStack Developer and Rust Developer</h2>
+
+        {/* Right side: Text content */}
+        <motion.div
+          variants={item}
+          className="space-y-8 col-span-1"
+        >
+          {/* Card 2 */}
+          <div className="p-8 rounded-lg bg-gray-800 text-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            <h2 className="text-3xl font-semibold">
+              FullStack Developer & Rust Enthusiast
+            </h2>
+            <p className="mt-2 text-lg text-gray-400">
+              Specializing in modern web development with a focus on performance and scalability.
+            </p>
+          </div>
         </motion.div>
       </div>
-      <div className="flex justify-center items-center">
-        <motion.div 
-        whileHover={{ scale: 1.2 }}
+
+      {/* Call-to-Action Button */}
+      <motion.div
+        whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        className="w-[100px] h-[50px] p-3 mt-10  rounded-3xl bg-orange-400 cursor-pointer" >
-        Contact us
+        className="mt-12 w-[200px] h-[60px] bg-gradient-to-r from-purple-600 to-pink-500 text-white text-lg font-bold rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-transform duration-300"
+      >
+        Contact Me
       </motion.div>
-      </div>
-      
     </motion.div>
   );
 }
