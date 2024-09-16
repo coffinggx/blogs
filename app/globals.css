@@ -2,36 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   /* Headings */
   h1 {
-    @apply text-4xl font-bold mb-4;
+    @apply text-5xl font-extrabold mb-6 text-gray-200;
+    @apply sm:text-4xl sm:mb-5;
   }
   h2 {
-    @apply text-3xl font-bold mb-3;
+    @apply text-4xl font-bold mb-5 text-gray-200;
+    @apply sm:text-3xl sm:mb-4;
   }
   h3 {
-    @apply text-2xl font-bold mb-2;
+    @apply text-3xl font-bold mb-4 text-gray-200;
+    @apply sm:text-2xl sm:mb-3;
   }
   h4 {
-    @apply text-xl font-bold mb-2;
+    @apply text-2xl font-semibold mb-3 text-gray-200;
+    @apply sm:text-xl sm:mb-2;
   }
   h5 {
-    @apply text-lg font-bold mb-2;
+    @apply text-xl font-semibold mb-2 text-gray-200;
+    @apply sm:text-lg sm:mb-1.5;
   }
   h6 {
-    @apply text-base font-bold mb-2;
+    @apply text-lg font-medium mb-2 text-gray-200;
+    @apply sm:text-base sm:mb-1;
   }
 
   /* Paragraphs */
   p {
-    @apply mb-4;
+    @apply mb-5 leading-relaxed text-gray-200;
+    @apply sm:mb-4;
   }
 
   /* Lists */
-  ul, ol {
-    @apply mb-4 ml-8;
+  ul,
+  ol {
+    @apply mb-5 ml-10 text-gray-200;
+    @apply sm:ml-6 sm:mb-4;
   }
   ul {
     @apply list-disc;
@@ -41,34 +49,48 @@
   }
   li {
     @apply mb-2;
+    @apply sm:mb-1.5;
   }
 
   /* Links */
   a {
-    @apply text-blue-600 hover:text-blue-800 underline;
+    @apply text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-out;
+    @apply sm:text-blue-400;
   }
 
   /* Blockquotes */
   blockquote {
-    @apply pl-4 border-l-4 border-gray-300 italic my-4;
+    @apply pl-6 border-l-4 border-blue-400 italic my-6 text-gray-200 bg-gray-50 rounded-md shadow-sm;
+    @apply sm:pl-4 sm:my-4;
   }
 
   /* Code blocks */
   pre {
-    @apply bg-gray-100 p-4 rounded-lg overflow-x-auto my-4;
+    @apply text-gray-200 bg-gray-800 p-5 rounded-lg overflow-x-auto   my-6 shadow-lg;
+    @apply sm:px-0.5 sm:py-0.5 sm:m-2;
   }
   code {
-    @apply bg-gray-100 px-1 py-0.5 rounded;
+    @apply text-gray-200 px-2 py-1 rounded bg-gray-800;
   }
 
   /* Tables */
   table {
-    @apply w-full border-collapse mb-4;
+    @apply w-full border-collapse mb-5 text-left;
+    @apply sm:text-sm;
   }
-  th, td {
-    @apply border border-gray-300 px-4 py-2;
+  th,
+  td {
+    @apply border border-gray-300 px-5 py-3;
   }
   th {
-    @apply bg-gray-100 font-bold;
+    @apply bg-gray-200 font-semibold text-gray-200;
+  }
+  td {
+    @apply bg-gray-50;
+  }
+
+  /* Add subtle hover effects for interactivity */
+  tr:hover {
+    @apply bg-gray-100 transition-colors duration-300 ease-in-out;
   }
 }

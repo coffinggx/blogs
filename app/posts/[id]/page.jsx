@@ -1,13 +1,13 @@
-import { getAllPostIds, getPostData } from '../../../libs/posts'
-import Head from 'next/head';
-import Date from '@/components/date';
+import { getAllPostIds, getPostData } from "../../../libs/posts";
+import Head from "next/head";
+import Date from "@/components/date";
 export async function generateStaticParams() {
   const paths = getAllPostIds();
   return paths;
 }
 
 export default async function Post({ params }) {
-  const postData =await  getPostData(params.id);
+  const postData = await getPostData(params.id);
   return (
     <section>
       <Head>
