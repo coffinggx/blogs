@@ -1,22 +1,17 @@
-**Bold**
+---
+title: "Api IMportane in Backend"
+date: "2020-21-23"
+---
 
-_Italic_
+Next.js has two forms of pre-rendering: **Statiic APi Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
 
-**_Bold and Italic_**
+- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
+- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
+  Here's some JavaScript code:
 
-**Bold**
-
-_Italic_
-
-**_Bold and italic_**
-
-# 6. Bullet points
-
-- Day-1
-- Day-2
-- Day-3
-- Day-4
-  - Day-5
-  - Day-6
-    - Day-7
-    - Day-8
+```javascript here is example of code required for api
+import mongoose from "mongoose";
+app.listen(port, () => {
+  console.log("Hello World");
+});
+```
